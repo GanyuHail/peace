@@ -1,0 +1,36 @@
+body {
+    background-color: #000;
+    margin: 0px;
+    overflow: hidden;
+}
+
+#info {
+    color: #DDD;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    padding: 7px 12px;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    background-color: #000;
+    line-height: 180%;
+}
+
+a {
+    color: #FFF;
+}
+
+#dummy1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    position:absolute;
+    top: -100px;
+}
+
+#dummy2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    position:absolute;
+    top: -100px;
+}
