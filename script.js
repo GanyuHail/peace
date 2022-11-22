@@ -1,14 +1,3 @@
-/*
-
-	3D UI demo based on http://www.liift.ca/tesla-emsx-interface
-	Simple geometry with hi-rez textures 
-	Trackball contrils and custom tilt shift shader
-	by @felixturner / airtight.cc
-
-*/
-
-/* global THREE, Stats, window, document, requestAnimationFrame */
-
 import * as THREE from 'three';
 
 var camera, scene, renderer;
@@ -23,8 +12,6 @@ var canvas;
 var ctx;
 var labelTexture;
 var FACE_CANVAS_DIM = 1024;
-
-var postprocessing = {};
 
 var clickSnd;
 var heading = 58;
@@ -45,9 +32,8 @@ function init() {
 	camGroup = new THREE.Object3D();
 	scene.add( camGroup );
 
-
-	camGroup.rotation.x = Math.PI/2;
-	camGroup.rotation.z = Math.PI/4;
+	// camGroup.rotation.x = Math.PI/2;
+	// camGroup.rotation.z = Math.PI/4;
 
 	//INNER CYLINDERS
 
@@ -67,8 +53,6 @@ function init() {
 		depthTest:false,
 		depthWrite: false,
 		blending: THREE.AdditiveBlending
-
-
 	} );
 
 	ring01Mesh = new THREE.Mesh( ring01Geom, ring01Material );
@@ -186,8 +170,6 @@ function init() {
 	}, 1000);
 
 	animate();
-
-	
 }
 
 // function onParamsChange () {
@@ -203,7 +185,6 @@ function init() {
 // }
 
 function animate() {
-
 	requestAnimationFrame( animate );
 	renderer.render;
 }
@@ -307,7 +288,6 @@ function drawLabel(num){
 	ctx.fillText( num + '°', 65, topPos);
 	
 	labelTexture.needsUpdate = true;
-
 }
 
 //on document load
